@@ -1,0 +1,89 @@
+
+<html >
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <p> Como declarar arrays?
+        <p id="mostra_array">   </p>
+        <p id="primeiroElemento"></p>
+        <p id="segundoElemento"></p>
+        <p id="array" ></p>
+        <p id="novoArray" > </p>
+        <p id="alfabeto" > </p>
+        <p id="alfabeto_invertido"></p>
+        <p id="numeros"></p>
+        <p id="numeroMaior"></p>
+        <p id="numeroMenor"></p>
+    </p>
+
+    <script> 
+        console.log("Oi, eu sou uma tag de script dentro do body");
+
+        //Declarando array:
+        var frutas = ["maçã", "manga", "banana"];
+        console.log(frutas);  
+
+        //Criar parágrafo
+
+        //fazer o array aparecer na tela:
+        document.getElementById("mostra_array").innerHTML = frutas;
+
+
+        //Tamanho do array:
+        var tamanho_array = frutas.length;
+        console.log("tamanho_array: " + tamanho_array);           
+        document.getElementById("declarando_array").innerHTML = tamanho_array;
+
+        //Primeira fruta:
+        var primeiraFruta = frutas[0];
+        console.log(primeiraFruta);
+        document.getElementById("primeiroElemento").innerHTML = primeiraFruta;
+
+        //Segunda fruta:
+        var segundaFruta = frutas[1];
+        console.log(segundaFruta);
+        document.getElementById("segundoElemento").innerHTML = segundaFruta;
+
+        //Percorrendo e imprimindo - loop for:
+        var arrayValor = "";
+        for(i=0; i < frutas.length; i++){
+            console.log(frutas[i]);
+            arrayValor = arrayValor + frutas[i] + "<br>";
+        }
+        document.getElementById("array").innerHTML = arrayValor;
+
+        //Adicionar elementos no final do array:
+        frutas.push("limão");
+        document.getElementById("novoArray").innerHTML = frutas;
+
+//tirza parou aqui
+
+        //Ordenar array:
+        var alfabeto = ["f","b","c","a", "g"];
+        alfabeto.sort();
+        document.getElementById("alfabeto").innerHTML = alfabeto;
+
+        //Inverter o array:
+        var alfabeto = ["f","b","c","a", "g"];
+        alfabeto.reverse();
+        document.getElementById("alfabeto_invertido").innerHTML = alfabeto;
+
+        //Array com numeros:
+        var numeros = [4, 7, 9, 27, 11, 30];
+        document.getElementById("numeros").innerHTML = numeros;
+
+        //Encontar o maior número:
+        var numeroMaior = Math.max.apply(Math, numeros);
+        document.getElementById("numeroMaior").innerHTML = numeroMaior;
+
+        //Encontrar o menor número:
+        var numeroMenor = Math.min.apply(Math, numeros);
+        document.getElementById("numeroMenor").innerHTML = numeroMenor;
+        
+
+    </script> 
+
+</body>
+</html>
